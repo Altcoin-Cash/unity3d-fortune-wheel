@@ -15,8 +15,8 @@ public class FortuneWheelManager : MonoBehaviour
     public GameObject Circle; 			// Rotatable Object with rewards
     public Text CoinsDeltaText; 		// Pop-up text with wasted or rewarded coins amount
     public Text CurrentCoinsText; 		// Pop-up text with wasted or rewarded coins amount
-    public int TurnCost = 300;			// How much coins user waste when turn whe wheel
-    public int CurrentCoinsAmount = 1000;	// Started coins amount. In your project it can be set up from CoinsManager or from PlayerPrefs and so on
+    public int TurnCost = 1;			// How much coins user waste when turn whe wheel
+    public int CurrentCoinsAmount = 10;	// Started coins amount. In your project it can be set up from CoinsManager or from PlayerPrefs and so on
     public int PreviousCoinsAmount;		// For wasted coins animation
 
     private void Awake ()
@@ -61,43 +61,43 @@ public class FortuneWheelManager : MonoBehaviour
     	// Here you can set up rewards for every sector of wheel
     	switch ((int)_startAngle) {
     	case 0:
-    	    RewardCoins (1000);
+    	    RewardCoins (10);
     	    break;
     	case -330:
-    	    RewardCoins (200);
+    	    RewardCoins (1);
     	    break;
     	case -300:
-    	    RewardCoins (100);
+    	    RewardCoins (0);
     	    break;
     	case -270:
-    	    RewardCoins (500);
+    	    RewardCoins (3);
     	    break;
     	case -240:
-    	    RewardCoins (300);
+    	    RewardCoins (2);
     	    break;
     	case -210:
-    	    RewardCoins (100);
+    	    RewardCoins (0);
     	    break;
     	case -180:
-    	    RewardCoins (900);
+    	    RewardCoins (4);
     	    break;
     	case -150:
-    	    RewardCoins (200);
+    	    RewardCoins (1);
     	    break;
     	case -120:
-    	    RewardCoins (100);
+    	    RewardCoins (0);
     	    break;
     	case -90:
-    	    RewardCoins (700);
+    	    RewardCoins (3);
     	    break;
     	case -60:
-    	    RewardCoins (300);
+    	    RewardCoins (2);
     	    break;
     	case -30:
-    	    RewardCoins (100);
+    	    RewardCoins (0);
     	    break;
     	default:
-    	    RewardCoins (300);
+    	    RewardCoins (1);
     	    break;
         }
     }
